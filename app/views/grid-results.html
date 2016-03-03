@@ -1,0 +1,12 @@
+<div class="row" ng-init="offset=0">
+	<div class="col-xs-12">
+		<div class="container-fluid">
+			<div ng-repeat="item in entities | limitTo:20:offset" style="margin: 1em; display: inline-block;">
+				<img ng-click="resultClick(entityMetadata, item, $index+offset)" ng-src="{{ item.url }}" height="100">
+			</div> 
+		</div>
+	</div>
+	<div class="col-xs-12 text-right">
+		<button class="btn btn-default" ng-click="offset = offset + 20">Next</button>
+	</div>
+</div>
